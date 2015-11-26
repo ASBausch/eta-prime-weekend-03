@@ -90,5 +90,6 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 
+  //added personal listen messages
   console.log('I am listening');
 }

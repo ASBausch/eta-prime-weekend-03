@@ -1,0 +1,43 @@
+{
+"memes": [
+    {"url" : "/public/images/buffMeme1.jpeg",
+      "id" : 1
+    },
+    {"url" : "/public/images/buffMeme2.jpg",
+      "id" : 2
+    },
+    {"url" : "/public/images/buffMeme3.jpg",
+      "id" : 3
+    },
+    {"url" : "/public/images/buffMeme4.gif",
+      "id" : 4
+    },
+    {"url" : "/public/images/buffMeme5.jpg",
+      "id" : 5
+    },
+    {"url" : "/public/images/buffMeme6.gif",
+      "id" : 6
+    },
+    {"url" : "/public/images/buffMeme7.gif",
+      "id" : 7
+    },
+    {"url" : "/public/images/buffMeme8.gif",
+      "id" : 8
+    },
+    {"url" : "/public/images/buffMeme9.gif",
+      "id" : 9
+    },
+    {"url" : "/public/images/buffMeme10.gif",
+      "id" : 10
+    },
+    {"url" : "/public/images/buffMeme11.jpg",
+      "id" : 11
+    },
+    {"url" : "/public/images/buffMeme12.gif",
+      "id" : 12
+    },
+    {"url" : "/public/images/buffMeme13.gif",
+      "id" : 13
+    }
+  ]
+}

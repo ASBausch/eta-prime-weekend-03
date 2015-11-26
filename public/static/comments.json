@@ -1,0 +1,43 @@
+{
+  "messages" :[
+  {"message" : "Happy To! Have a seat.",
+  "imageID" : 1
+  },
+  {"message" : "It's not a requirement for friendship, but it helps solidify",
+  "imageID" : 2
+  },
+  {"message" : "As it should be",
+  "imageID" : 3
+  },
+  {"message" : "When the conversation gets too esoteric",
+  "imageID" : 4
+  },
+  {"message" : "I did it before George R. R. Martin",
+  "imageID" : 5
+  },
+  {"message" : "How I wish I talked...without sounding like a total putz",
+  "imageID" : 6
+  },
+  {"message" : "How I feel about vegan baking",
+  "imageID" : 7
+  },
+  {"message" : "Life...sometimes",
+  "imageID" : 8
+  },
+  {"message" : "It depends on the current syntax and routing",
+  "imageID" : 9
+  },
+  {"message" : "...I said 'good-day' sir!",
+  "imageID" : 10
+  },
+  {"message" : "When I attempt the old addage 'dress the part'",
+  "imageID" : 11
+  },
+  {"message" : "And the dog?...jk...kinda",
+  "imageID" : 12
+  },
+  {"message" : "Shanty Time",
+  "imageID" : 13
+  }
+  ]
+}
