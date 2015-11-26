@@ -1,21 +1,23 @@
-extends /views/layout.jade
+extends layout
 //this will fill the header with content
 block header 
   header 
-    h1= Into every generation a meme is born
+    h1 Into every generation a meme is born
 //this will pull in the memeImage by index number
 block memeImage
   //iterate through each object in memes and insert the url
   //and imageID
-  each index in memes
-  img #{url}
-  p #{imageID}
+//  each index in memes
+  p meme image
+//  img #{url}
+//  p #{imageID}
 
 //this will pull in the memeComment by index number
 block memeComment
   //iterate though each object in messages
   //if memeImage imageID === imageID from memeComment
-  p #{message}
+//  p #{message}
+  p meme message
 //this will build our message Form
 block messageForm
 //this will show the message that has been input in message form
