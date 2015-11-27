@@ -5,8 +5,13 @@ var messages = require('../public/static/comments.json');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   // renders the file named "index.jade" along with the data
-  res.render('index', {title: 'Buffy Meme', data: memes, comnt: messages});
+  res.render('index', {title: 'Buffy Meme', data: memes});
 });
+
+// creates a page /memes with images and comments
+//router.get('/memes', function(req, res, next) {
+//  res.render('meme', {data: memes});
+//});
 
 // exports the router
 

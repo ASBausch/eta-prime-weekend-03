@@ -1,0 +1,22 @@
+extends layout
+
+block content
+//this layout needs a single meme image
+
+
+
+//this needs the comment for the specified and displayed
+//single meme
+
+
+//this form will be on every specific meme image
+  div
+    form(name="add_message", method="post")
+    h3 Name:
+    |
+    input(type='text', name='name')
+    |
+    h3 Message:
+    |
+    input(type='text', name='message')
+    input(type="submit" value="Submit")

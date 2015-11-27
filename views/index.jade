@@ -1,31 +1,7 @@
 extends layout
-
-block header 
-  header 
-    h1 Into every generation a meme is born
-
-block memeImage
+//this template is for our landing page which
+//shows all memes
+block content
   div
-  each meme in data
-    each item in meme 
-      image(src= item.url)
-
-block memeComment
-  div
-  each messages in comnt
-    each item in messages
-      p= item.message
-
-block messageForm
-  div
-    form(name="add_message", method="post")
-    h3 Name:
-    |   
-    input(type='text', name='name')
-    |   
-    h3 Message:
-    |   
-    input(type='text', name='message')
-    input(type="submit" value="Submit")
-
-block messageAppend
+  for meme in data
+      image(src= meme.url)
