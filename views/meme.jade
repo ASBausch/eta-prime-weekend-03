@@ -1,6 +1,13 @@
 extends layout
+//this space needs to display the meme and comment by id
 
+//adds form to each individual meme page 
 block content
+  image(src="#{meme.url}")
+  //you have to reference the property 
+  //squirrly syntax is used for the objects and properties
+  p #{comment.message}
+  
   form(name="add-message", method="post")
     div.input
       span.label Name
@@ -9,5 +16,8 @@ block content
       span.label Comment
       input(name="message" type="text")
     div.actions
-    input(type="submit", value="submit")
+      //this hidden input tracks what meme the comment refers to by id
+      input(type="hidden" name="memeId" value="#{meme.id}")
+      input(type="submit", value="submit")
+      input(type="reset", value="clear")
   a(href="/") Send me back

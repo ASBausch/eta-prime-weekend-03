@@ -5,5 +5,6 @@ extends layout
 block content
   div
   for meme in data
-      a(href="/memes?id=#{meme.id}")
+      //in passing in this link we are giving it the id from the json object
+      a(href="/memes/#{meme.id}")
         image(src= meme.url)
