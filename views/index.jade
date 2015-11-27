@@ -6,11 +6,15 @@ block header
 
 block memeImage
   div
-    h2 meme image
+  each meme in data
+    each item in meme 
+      image(src= item.url)
 
 block memeComment
   div
-    p meme message
+  each messages in comnt
+    each item in messages
+      p= item.message
 
 block messageForm
   div
