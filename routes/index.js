@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var memes = require('../public/static/memes.json');
-var comments = require('../public/static/comments.json');
+var variableComments = require('../public/static/variableComments.json');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   // renders the file named "index.jade" along with the data
@@ -24,9 +24,9 @@ router.get('/memes/:id', function(req, res, next) {
   }
 
   var currentComment;
-  for (i = 0; i < comments.length; i++) {
-    if (comments[i].imageID == memeID) {
-      currentComment = comments[i];
+  for (i = 0; i < variableComments.length; i++) {
+    if (variableComments[i].imageID == memeID) {
+      currentComment = variableComments[i];
     }
   }
 
@@ -39,6 +39,21 @@ router.get('/memes/:id', function(req, res, next) {
 
 });
 
-// exports the router
+router.post('/meme/1', function(req, res, next) {
+  //these two variables set the input of the form to variables
+  var newMessage = req.body.message;
+  var idMatch = req.body.memeID; //this syntax?
+
+  var formComment;
+  for (i = 0; i < variableComments.length; i++) {
+    if (variableComments[i].imageID == idMatch) {
+      formComment = variableComments[i];
+    }
+  }
+
+  //push the new element to the array
+  formComment.message.push(formComment);
+
+});
 
 module.exports = router;

@@ -6,8 +6,12 @@ block content
   image(src="#{meme.url}")
   //you have to reference the property 
   //squirrly syntax is used for the objects and properties
-  p #{comment.message}
-  
+  div  
+    each val in comment.message
+      p= val
+  //loop through the current property of messages in the 
+  //variableCommentsarray(set before by the id) and puts in 
+  //in p
   form(name="add-message", method="post")
     div.input
       span.label Name
