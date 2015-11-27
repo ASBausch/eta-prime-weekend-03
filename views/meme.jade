@@ -1,22 +1,13 @@
 extends layout
 
 block content
-//this layout needs a single meme image
-
-
-
-//this needs the comment for the specified and displayed
-//single meme
-
-
-//this form will be on every specific meme image
-  div
-    form(name="add_message", method="post")
-    h3 Name:
-    |
-    input(type='text', name='name')
-    |
-    h3 Message:
-    |
-    input(type='text', name='message')
-    input(type="submit" value="Submit")
+  form(name="add-message", method="post")
+    div.input
+      span.label Name
+      input(name="name" type="text")
+    div.input
+      span.label Comment
+      input(name="message" type="text")
+    div.actions
+    input(type="submit", value="submit")
+  a(href="/") Send me back

@@ -1,7 +1,9 @@
 extends layout
 //this template is for our landing page which
-//shows all memes
+//shows all memes. href /memes is a page we created in our routes, each image takes you
+//to the individule page based on the id property of the meme object
 block content
   div
   for meme in data
-      image(src= meme.url)
+      a(href="/memes?id=#{meme.id}")
+        image(src= meme.url)

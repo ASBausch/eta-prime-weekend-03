@@ -9,9 +9,9 @@ router.get('/', function(req, res, next) {
 });
 
 // creates a page /memes with images and comments
-//router.get('/memes', function(req, res, next) {
-//  res.render('meme', {data: memes});
-//});
+router.get('/memes', function(req, res, next) {
+  res.render('meme', {title: 'Buffy Meme'});
+});
 
 // exports the router
 
