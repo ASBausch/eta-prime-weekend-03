@@ -3,8 +3,8 @@ extends layout
 //shows all memes. href /memes is a page we created in our routes, each image takes you
 //to the individule page based on the id property of the meme object
 block content
-  div
   for meme in data
       //in passing in this link we are giving it the id from the json object
       a(href="/memes/#{meme.id}")
-        image(src= meme.url)
+        div.display 
+          image.thumbnail(src= meme.url)

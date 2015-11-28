@@ -4,13 +4,15 @@ var memes = require('../public/static/memes.json');
 var variableComments = require('../public/static/variableComments.json');
 var fs = require('fs');
 var path = require('path');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   // renders the file named "index.jade" along with the data
   res.render('index', {title: 'Buffy Meme', data: memes});
 });
 
-// creates a page /memes with images and comments
+// creates a page /memes with individual images and comments
+//based on the url id
 router.get('/memes/:id', function(req, res, next) {
   //getting a request from memes with an id and
   //we are setting that id to a variable
@@ -27,6 +29,7 @@ router.get('/memes/:id', function(req, res, next) {
 
   var currentComment;
   for (i = 0; i < variableComments.length; i++) {
+    //if they match the comment is set to the correct comment
     if (variableComments[i].imageID == memeID) {
       currentComment = variableComments[i];
     }
@@ -56,24 +59,8 @@ router.post('/', function(req, res, next) {
   //push the newMessage to the proper index of the array
   formComment.message.push(newMessage);
 
-  //var string = JSON.stringify(variableComments);
+  res.redirect('/memes/' + idMatch);
 
-  // This is the path the file is in
-  //var filePath = path.join(__dirname, '../public/static/variableComments.json');
-
-  // write the stringified version to the file
-//  fs.writeFile(filePath, string, function(err) {
-//   if (err) {
-     // if there is an error, "next" middleware will handle it.
-     // Next in our case is the error handler in app.js
-//     next(err);
-//   } else {
-     // it's all good! Send the object back.
-//     res.send(newMessage);
-//   }
-// });
-
-  res.redirect('/memes/'+ idMatch);
 });
 
 module.exports = router;

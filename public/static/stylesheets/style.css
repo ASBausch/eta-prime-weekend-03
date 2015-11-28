@@ -1,0 +1,99 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+  cursor: pointer;
+}
+
+header {
+  font-size: 20px;
+  color: darkgrey;
+  display: block;
+  width: 90%;
+  margin:auto;
+  text-align: center;
+}
+
+p {
+  padding: 1px 0px 5px 7px;
+  font-weight: bold;
+  font-size: 18px;
+  width:100%;
+}
+
+textarea, keygen, select, button {
+    margin: 8px 0px 0px 5px;
+    font: 11px BlinkMacSystemFont;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+}
+
+.single {
+  display: block;
+  width: 30%;
+  margin: auto;
+}
+
+.comment {
+  display: block;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+
+}
+
+.label {
+  padding: 8px;
+}
+
+.input {
+  color: black;
+}
+
+.actions {
+  padding: 5px 5px 5px 5px;
+  color: blue;
+  margin: auto;
+}
+
+.buttonSub {
+  float: left;
+  font-size: 20px;
+}
+
+.buttonClear {
+  float: right;
+  font-size: 20px;
+}
+
+.back {
+  clear: both;
+  color: black;
+  font-size: 21px;
+  margin: auto;
+  display: inline-block;
+  padding: 0px 0px 0px 10px;
+}
+
+.thumbnail {
+  display: inline-block;
+  margin: 30px;
+  width: 200px;
+  height: 200px;
+}
+
+.grid {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+.display {
+  display: inline-block;
+  clear:both;
+}

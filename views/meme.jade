@@ -3,25 +3,24 @@ extends layout
 
 //adds form to each individual meme page 
 block content
-  image(src="#{meme.url}")
+  image.single(src="#{meme.url}")
   //you have to reference the property 
   //squirrly syntax is used for the objects and properties
-  div  
+  div.comment  
     each val in comment.message
       p= val
   //loop through the current property of messages in the 
   //variableCommentsarray(set before by the id) and puts in 
   //in p
-  form(name="add-message", method="post" action="/")
+  form.single(name="add-message", method="post" action="/")
+  
     div.input
-    //  span.label Name
-    //  input(name="name" type="text")
-    div.input
-      span.label Comment
+      span.label Other Thoughts?
       input(name="message" type="text")
-    div.actions
+    div
       //this hidden input tracks what meme the comment refers to by id
       input(type="hidden" name="memeId" value="#{meme.id}")
-      input(type="submit", value="submit")
-      input(type="reset", value="clear")
-  a(href="/") Send me back
+      div.actions
+      input.buttonSub(type="submit", value="Share")
+      input.buttonClear(type="reset", value="Oops")
+  a.back(href="/") Back to the memes
