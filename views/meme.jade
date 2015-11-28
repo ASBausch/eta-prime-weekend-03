@@ -12,10 +12,10 @@ block content
   //loop through the current property of messages in the 
   //variableCommentsarray(set before by the id) and puts in 
   //in p
-  form(name="add-message", method="post")
+  form(name="add-message", method="post" action="/")
     div.input
-      span.label Name
-      input(name="name" type="text")
+    //  span.label Name
+    //  input(name="name" type="text")
     div.input
       span.label Comment
       input(name="message" type="text")
