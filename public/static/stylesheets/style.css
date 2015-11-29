@@ -44,7 +44,6 @@ textarea, keygen, select, button {
   width: 100%;
   margin: auto;
   text-align: center;
-
 }
 
 .label {
@@ -72,7 +71,6 @@ textarea, keygen, select, button {
 }
 
 .back {
-  clear: both;
   color: black;
   font-size: 21px;
   margin: auto;
