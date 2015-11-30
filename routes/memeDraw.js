@@ -2,8 +2,6 @@ var express = require('express');
 var router = express.Router();
 var memes = require('../public/static/memes.json');
 var variableComments = require('../public/static/variableComments.json');
-var fs = require('fs');
-var path = require('path');
 
 //gets the meme page - memes with individual images and comments
 //based on the url id since our routes are now seperated
