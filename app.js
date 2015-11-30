@@ -4,9 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
 var routes = require('./routes/index');
 var users = require('./routes/users');
+
+//new exported routes are required here
+var memeDraw = require('./routes/memeDraw');
+var post = require('./routes/post');
 
 var app = express();
 
@@ -23,6 +26,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
+
+//tells our app to use the memeDraw router
+app.use('/memes', memeDraw);
+
+//tells our app to use the post router
+app.use('/post', post);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
