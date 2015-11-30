@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var memes = require('../public/static/memes.json');
-var variableComments = require('../public/static/variableComments.json');
+var memes = require('../data/memes.json');
+var variableComments = require('../data/variableComments.json');
 var fs = require('fs');
 var path = require('path');
 
@@ -25,7 +25,7 @@ router.post('/', function(req, res, next) {
 
   // This is the path the file is in
 
-  var filePath = path.join(__dirname, '../public/static/variableComments.json');
+  var filePath = path.join(__dirname, '../data/variableComments.json');
 
   // write the stringified version to the file
   fs.writeFile(filePath, string, function(err) {
