@@ -10,7 +10,6 @@ router.post('/', function(req, res, next) {
   var newMessage = req.body.message;
   var idMatch = req.body.imageID; //this syntax?
   //this loop only finds where to put the newMessage
-  console.log(idMatch);
   var formComment;
   for (i = 0; i < variableComments.length; i++) {
     if (variableComments[i].imageID == idMatch) {
@@ -20,7 +19,6 @@ router.post('/', function(req, res, next) {
 
   //push the newMessage to the proper index of the array
   formComment.message.push(newMessage);
-  console.log("array push");
 
   // stringify it so that it will write to the array correctly
   var string = JSON.stringify(variableComments);
@@ -28,7 +26,7 @@ router.post('/', function(req, res, next) {
   // This is the path the file is in
 
   var filePath = path.join(__dirname, '../public/static/variableComments.json');
-  console.log("File save");
+
   // write the stringified version to the file
   fs.writeFile(filePath, string, function(err) {
      if (err) {
@@ -40,8 +38,6 @@ router.post('/', function(req, res, next) {
        res.send(newMessage);
      }
    });
-
-  //res.redirect('/memes/' + idMatch);
 
 });
 

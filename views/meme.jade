@@ -16,11 +16,11 @@ block content
   
     div.input
       span.label Other Thoughts?
-      input(name="message" type="text")
+      input(name="message" type="text" required)
     div
       //this hidden input tracks what meme the comment refers to by id
       input(type="hidden" name="imageID" value="#{meme.id}")
       div.actions
-      input.buttonSub(type="submit", value="Put it up")
-      input.buttonClear(type="reset", value="Nevermind")
+      input.buttonSub(type="submit", value="Share")
+      input.buttonClear(type="reset", value="Clear")
   a.back(href="/") Back to the memes

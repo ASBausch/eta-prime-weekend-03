@@ -34,6 +34,15 @@ textarea, keygen, select, button {
     display: inline-block;
     text-align: start;
 }
+input:hover {
+  color: darkred;
+  font-weight: bolder;
+}
+
+.input:hover {
+  color: darkred;
+  font-weight: bolder;
+}
 
 .single {
   display: block;
@@ -90,11 +99,16 @@ textarea, keygen, select, button {
   text-align: center;
 }
 
+.back:hover {
+  color: darkred;
+  font-size: 28px;
+}
+
 .thumbnail {
   display: inline-block;
-  margin: 30px;
-  width: 200px;
-  height: 200px;
+  margin: 20px;
+  width: 180px;
+  height: 180px;
   border: solid;
   border-width: 4px;
   border-color: #142641;
@@ -110,6 +124,14 @@ textarea, keygen, select, button {
   display: inline-block;
   clear: both;
   width: 25%;
-  margin:auto;
+  margin: auto;
+  text-align: center;
+  padding: 0px;
+}
 
+.display:hover {
+  background-color: darkred;
+  border-radius: 20px;
+}
+.wrapper {
 }
