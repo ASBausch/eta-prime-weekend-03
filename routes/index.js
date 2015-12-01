@@ -4,8 +4,10 @@ var memes = require('../data/memes.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  //.get makes available
-  // renders the file named "index.jade" along with the data
+  /** GET makes the url available while res(responce)
+  renders the file named "index.jade" along with the data
+  from memes.json
+  */
   res.render('index', {title: 'Buffy Meme', data: memes});
 });
 

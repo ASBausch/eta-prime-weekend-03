@@ -5,7 +5,7 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: white;
   cursor: pointer;
 }
 
@@ -31,7 +31,7 @@ textarea, keygen, select, button {
     text-indent: 0px;
     text-shadow: none;
     display: inline-block;
-    text-align: start;
+    text-align: center;
 }
 input:hover {
   color: darkred;
@@ -45,11 +45,15 @@ input:hover {
 
 .single {
   display: block;
-  width: 30%;
+  width: 40%;
   margin: auto;
   border: solid;
   border-width: 6px;
   border-color: #142641;
+}
+
+.single:hover {
+
 }
 
 .form {
@@ -67,10 +71,12 @@ input:hover {
 
 .label {
   padding: 8px;
+  text-align: center;
 }
 
 .input {
   color: black;
+  text-align: center;
 }
 
 .actions {
@@ -96,6 +102,7 @@ input:hover {
   display: block;
   padding: 0px 0px 0px 10px;
   text-align: center;
+  width: 20%;
 }
 
 .back:hover {
@@ -105,22 +112,24 @@ input:hover {
 
 .thumbnail {
   display: inline-block;
-  margin: 20px;
+  margin: 10px;
   width: 180px;
   height: 180px;
   border: solid;
   border-width: 4px;
-  border-color: #142641;
+  border-color: #331421;
+  transition: width 1s ease;
+  transition: height 1s ease;
 }
 
-.grid {
-  display: block;
-  width: 100%;
-  margin: auto;
+.thumbnail:hover {
+  width: 250px;
+  height: 250px;
+  transition: width height;
 }
 
 .display {
-  display: inline-block;
+  display: inline;
   clear: both;
   width: 25%;
   margin: auto;
@@ -128,9 +137,7 @@ input:hover {
   padding: 0px;
 }
 
-.display:hover {
-  background-color: darkred;
-  border-radius: 20px;
-}
+
 .wrapper {
+  text-align: center;
 }

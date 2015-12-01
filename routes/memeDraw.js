@@ -3,12 +3,12 @@ var router = express.Router();
 var memes = require('../data/memes.json');
 var variableComments = require('../data/variableComments.json');
 
-//gets the meme page - memes with individual images and comments
-//based on the url id since our routes are now seperated
-///:id is all we need because we already know it is on /memes
+/**GET makes the meme page available- memes with individual images and comments
+based on the url id since our routes are eperated /:id is all we need because we
+already know it is on /memes*/
 router.get('/:id', function(req, res, next) {
-  //getting a request from memes with an id and
-  //we are setting that id to a variable
+  /**getting a request from memes with an id and
+  we are setting that id to a variable*/
   var memeID = req.params.id;
 
   //we need to find out if the request origin id matches the meme id
